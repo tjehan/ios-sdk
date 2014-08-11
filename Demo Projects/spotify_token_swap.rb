@@ -43,6 +43,7 @@ SPOTIFY_ACCOUNTS_ENDPOINT = URI.parse("https://accounts.spotify.com")
 SPOTIFY_PROFILE_ENDPOINT = URI.parse("https://api.spotify.com")
 
 set :port, 1234 # The port to bind to.
+set :bind, '0.0.0.0' # IP address of the interface to listen on (all)
 
 # A DB for storing refresh tokens for user access tokens.
 db = SQLite3::Database.new("spotify_token_swap.db")
